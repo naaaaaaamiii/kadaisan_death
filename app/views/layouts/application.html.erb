@@ -13,10 +13,10 @@
   <body>
     <header>
         <li>
-          <%= link_to "Home", users_path %>
+          <%= link_to "Bookers", root_path %>
         </li>
         <li>
-          <%= link_to "About", about_path %>
+          <%= link_to "Home", users_path %>
         </li>
       <% if user_signed_in? %>
         <li>
@@ -27,6 +27,9 @@
         </li>
       <% else %>
         <li>
+          <%= link_to "About", about_path %>
+        </li>
+        <li>
           <%= link_to "Sign up", new_user_registration_path %>
         </li>
         <li>
@@ -34,12 +37,11 @@
         </li>
      <% end %>
     </header>
-    
-    <fotter>CopyRight Infratop.inc</fotter>
-    
-    
     <%= yield %>
-    
+    <main>
+    <%= flash[:notice] %>
+    </main>
+    <fotter>CopyRight Infratop.inc</fotter>
   </body>
     
 </html>

@@ -1,10 +1,10 @@
 
-<div>
-  <%= flash[:notice] %>
-</div>
 
 <body>
   <h1>Book detail</h1>
+  <%= image_tag user.get_image %>
+  <%= user.name %> 
+  
   <p><strong>Title:</strong><%= @book.title %></p>
 
   <p><strong>Body:</strong><%= @book.body %></p>
