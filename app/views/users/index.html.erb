@@ -1,9 +1,10 @@
-<% @users.each do |user| %>
+  <%= render 'new book', user: @user , book: @book %>
+  
   <div>
     <h1>User info</h1>
-    <%= image_tag user.get_image %>
-    <p>name  <%= user.name %>  </p>
-    <p>introduction <%= user.introduction %> </p>
+    <%= image_tag @user.get_image %>
+    <p>name  <%= @user.name %>  </p>
+    <p>introduction <%= @user.introduction %> </p>
   </div>
-<% end %>
+
 
